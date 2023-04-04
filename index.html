@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Личный кабинет</title>
+</head>
+
+<body>
+  <header id="header" class="header">
+<div class="center1280 flex">
+
+<button class="burger-menu"></button>
+  <a href="/" class="logo">
+   <img src="img/logo.png" alt="">
+  </a>
+  <div class="right-menu-icon">
+    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M7.98493 13.3457C4.11731 13.3457 0.814453 13.9305 0.814453 16.2724C0.814453 18.6143 4.09636 19.22 7.98493 19.22C11.8525 19.22 15.1545 18.6343 15.1545 16.2933C15.1545 13.9524 11.8735 13.3457 7.98493 13.3457Z"
+        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M7.98489 10.0059C10.523 10.0059 12.5801 7.94779 12.5801 5.40969C12.5801 2.8716 10.523 0.814453 7.98489 0.814453C5.44679 0.814453 3.3887 2.8716 3.3887 5.40969C3.38013 7.93922 5.42394 9.99731 7.95251 10.0059H7.98489Z"
+        stroke="white" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+
+</div>
+  <div class="mobile-menu">
+    <ul class="personal__list">
+      <li class="personal__menu">
+        <a class="active" href="#">Аккаунт</a>
+      </li>
+      <li class="personal__menu">
+        <a href="#">Тренироваки</a>
+  
+      </li>
+      <li class="personal__menu">
+        <a href="#">Достижения</a>
+  
+      </li>
+    </ul>
+  </div>
+
+  
+</header>
+
+  <main class="main center1280">
+    <section class="personal">
+      <div class="personal__items">
+  <ul class="personal__list">
+    <li class="personal__menu">
+      <a class="active" href="#">Аккаунт</a>
+    </li>
+    <li class="personal__menu">
+      <a href="#">Тренироваки</a>
+
+    </li>
+    <li class="personal__menu">
+      <a href="#">Достижения</a>
+
+    </li>
+  </ul>
+</div>
+      <div class="personal__items">
+        <div class="personal__item">
+          <h2 class="personal__title">Личные данные</h2>
+        </div>
+        <div class="personal__info">
+          <div class="personal__info-box">
+            <label for="name">Имя</label>
+            <input id="name" type="text">
+          </div>
+
+          <div class="personal__info-box">
+            <label for="surname">Фамилия</label>
+            <input id="surname" type="text">
+          </div>
+
+          <div class="personal__info-box">
+            <span class="span-label">Пол</span>
+            <select class="select" name="language">
+              <option disabled>Выбрать</option>
+              <option value="Мужской">Мужской</option>
+              <option value="Женский">Женский</option>
+            </select>
+          </div>
+
+          <div class="personal__info-box">
+            <span class="span-label">Дата рождения</span>
+            <select class="select" name="language">
+              <option disabled>__.__.____</option>
+              <option value="Вариант">Вариант</option>
+              <option value="Вариант">Вариант</option>
+              <option value="Вариант">Вариант</option>
+              <option value="Вариант">Вариант</option>
+              <option value="Вариант">Вариант</option>
+              <option value="Вариант">Вариант</option>
+            </select>
+          </div>
+          <button class="personal__button-save">Сохранить информацию</button>
+        </div>
+        <div class="personal__info">
+          <div class="personal__item">
+            <h2 class="personal__title">Аватарка</h2>
+          </div>
+          <div class="personal__info-box">
+            <div style="background-image: url('./img/avatar.png');" class="personal__avatar">
+            </div>
+            <label class="avatar-download" for="avatar-download">
+              <input id="avatar-download" type="file">
+              <button class="personal__button-save cansel">
+                Загрузить фотографию
+              </button>
+            </label>
+          </div>
+        </div>
+        <div class="personal__items">
+          <div class="personal__item">
+            <h2 class="personal__title">Пароль</h2>
+          </div>
+          <div class="personal__info">
+            <div class="personal__info-box">
+              <div class="personal__info-box">
+                <label for="old-password">Пароль</label>
+                <input id="old-password" type="password">
+              </div>
+
+              <div class="personal__info-box">
+                <label for="new-password">Новый пароль</label>
+                <input id="new-password" type="password">
+              </div>
+              <div class="personal__info-box">
+                <label for="repeat-new-password">Подтвердите новый пароль</label>
+                <input id="repeat-new-password" type="password">
+              </div>
+              <div class="personal__box">
+                <button class="personal__button-save ">
+                  Обновить пароль
+                </button>
+                <button class="reset-password">Забыли пароль?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+
+  <footer>
+
+
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
