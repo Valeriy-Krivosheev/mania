@@ -4648,7 +4648,7 @@ main {
   margin-top: 20px;
   background-color: #0d1b23;
   border: 1px solid #222e35;
-  padding: 7px 26px;
+  padding: 7px 0px;
   cursor: pointer;
   border-radius: 6px;
 }
