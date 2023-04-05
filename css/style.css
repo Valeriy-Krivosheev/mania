@@ -4474,13 +4474,14 @@ main {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  width: 360px;
+  width: 380px;
   padding: 5px 12px;
   background-color: #071116;
   border: 1px solid #222e35;
   border-radius: 6px;
   color: #ffffff;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .new-select__list {
@@ -4498,7 +4499,8 @@ main {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  max-width: 360px;
+  max-width: 380px;
+  font-weight: 600;
 }
 
 .new-select__list.on {
@@ -4571,21 +4573,39 @@ main {
   margin-bottom: 50px;
 }
 .personal__menu {
-  padding: 0.2em 0 0.3em;
+  padding: 0;
 }
 .personal__menu a {
   font-weight: 600;
   color: #9ba8b0;
   padding: 4px 110px 4px 10px;
-  background-color: #202b30;
   border-radius: 6px;
-  max-width: 175px;
+  width: 90%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .personal__menu a.active {
+  background-color: #202b30;
   color: #ffffff;
   position: relative;
 }
 .personal__menu a.active::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 4px;
+  background-color: #3784f7;
+  left: -10px;
+  border-radius: 10px;
+  top: 0;
+}
+.personal__menu a:hover {
+  background-color: #202b30;
+  color: #ffffff;
+  position: relative;
+}
+.personal__menu a:hover::before {
   position: absolute;
   content: "";
   height: 100%;
@@ -4602,6 +4622,7 @@ main {
   padding-bottom: 15px;
   border-bottom: 1px solid #202b32;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 .personal__info label,
 .personal .span-label {
@@ -4610,8 +4631,8 @@ main {
   margin-bottom: 5px;
 }
 .personal__info input {
-  width: 360px;
-  padding: 5px 12px;
+  width: 380px;
+  padding: 6px 12px;
   background-color: #071116;
   border: 1px solid #222e35;
   border-radius: 6px;
@@ -4621,12 +4642,13 @@ main {
   margin-bottom: 15px;
 }
 .personal__button-save {
+  width: 222px;
   font-weight: 700;
   color: #ffffff;
   margin-top: 20px;
   background-color: #0d1b23;
   border: 1px solid #222e35;
-  padding: 10px 26px;
+  padding: 7px 26px;
   cursor: pointer;
   border-radius: 6px;
 }
@@ -4663,7 +4685,7 @@ main {
 }
 
 .avatar-download {
-  max-width: 210px;
+  max-width: 222px;
   max-height: 50px;
   position: relative;
   cursor: pointer;
@@ -4784,6 +4806,7 @@ main {
 }
 .history__title {
   margin-bottom: 15px;
+  font-size: 18px;
 }
 .history__train-date {
   color: #9aa3ae;
@@ -4884,6 +4907,11 @@ main {
   border-radius: 0;
   left: 30px;
   top: 28px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .statistic__item::after {
   content: "";
@@ -4909,6 +4937,11 @@ main {
 .statistic__item span {
   font-weight: 700;
   font-size: 14px;
+}
+.statistic__item.active::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .statistic__info {
   display: -webkit-box;
@@ -5013,7 +5046,6 @@ main {
 
 .date-container {
   padding: 15px;
-  overflow-x: auto;
   position: relative;
 }
 
@@ -5115,6 +5147,8 @@ main {
 .week__day span {
   color: #81868a;
   font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .week__color {
@@ -5136,6 +5170,15 @@ main {
   background-color: #7ff1a6;
 }
 
+.no-border {
+  border: none;
+}
+
+@media (max-width: 1210px) {
+  .date-container {
+    overflow-x: scroll;
+  }
+}
 @media (max-width: 991px) {
   .personal__items:last-child {
     max-width: 72%;
@@ -5249,6 +5292,11 @@ main {
   }
   .personal__button-save {
     width: 100%;
+    font-size: 14px;
+  }
+  .personal__avatar {
+    max-width: 140px;
+    max-height: 140px;
   }
   .personal__box {
     max-width: none;
@@ -5274,18 +5322,16 @@ main {
   .personal__title {
     font-size: 18px;
   }
-  .history__train-link div {
-    font-size: 14px;
-  }
   .year-wrapp {
     display: block;
     width: 300px;
     height: 1310px;
+    overflow: hidden;
   }
   .calendar-wrap {
-    -webkit-transform: rotate(90deg) translateY(45%) scaleY(-1) translateX(40%);
-        -ms-transform: rotate(90deg) translateY(45%) scaleY(-1) translateX(40%);
-            transform: rotate(90deg) translateY(45%) scaleY(-1) translateX(40%);
+    -webkit-transform: rotate(90deg) translateY(5%) scaleY(-1) translateX(40%);
+        -ms-transform: rotate(90deg) translateY(5%) scaleY(-1) translateX(40%);
+            transform: rotate(90deg) translateY(5%) scaleY(-1) translateX(40%);
   }
   .year-week {
     -webkit-box-orient: horizontal;
@@ -5296,6 +5342,10 @@ main {
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin-right: auto;
+    margin: 0 auto;
+    -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+            transform: translateY(30px);
   }
   .parent-calendar {
     -ms-grid-columns: (14px)[54];
@@ -5327,8 +5377,14 @@ main {
     margin-right: 20px;
     font-size: 14px;
   }
-  .new-select {
+  .personal__info-box,
+  .new-select__list,
+  .new-select,
+  .history__train-link div {
     font-size: 14px;
+  }
+  .year-month {
+    max-width: 50px;
   }
 }
 @media (max-width: 380px) {
