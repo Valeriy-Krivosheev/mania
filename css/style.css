@@ -4482,6 +4482,7 @@ main {
   color: #ffffff;
   margin-bottom: 10px;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .new-select__list {
@@ -4501,6 +4502,7 @@ main {
           user-select: none;
   max-width: 380px;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .new-select__list.on {
@@ -4581,6 +4583,7 @@ main {
   padding: 4px 110px 4px 10px;
   border-radius: 6px;
   width: 90%;
+  font-size: 14px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -4629,6 +4632,7 @@ main {
   display: block;
   font-weight: 700;
   margin-bottom: 5px;
+  font-size: 14px;
 }
 .personal__info input {
   width: 380px;
@@ -4642,13 +4646,13 @@ main {
   margin-bottom: 15px;
 }
 .personal__button-save {
+  font-size: 14px;
   font-weight: 700;
   color: #ffffff;
   margin-top: 20px;
   background-color: #0d1b23;
   border: 1px solid #222e35;
   padding: 7px 20px;
-  margin-right: 10px;
   cursor: pointer;
   border-radius: 6px;
 }
@@ -4681,6 +4685,7 @@ main {
   background-color: transparent;
   font-weight: 700;
   cursor: pointer;
+  font-size: 14px;
   margin-top: 20px;
 }
 
@@ -4813,6 +4818,7 @@ main {
   display: block;
   max-width: 240px;
   margin-bottom: 8px;
+  font-size: 14px;
 }
 .history__train-link {
   background-image: url(./../img/slider-prev1.png);
@@ -4834,6 +4840,7 @@ main {
 }
 .history__train-link div {
   font-weight: 600;
+  font-size: 14px;
 }
 .history__train-link .pink {
   color: #f988c5;
@@ -5001,6 +5008,7 @@ main {
   color: #81868a;
   font-weight: 600;
   line-height: 0.8;
+  font-size: 14px;
 }
 
 .year-wrapp {
@@ -5042,6 +5050,7 @@ main {
 .month-date {
   margin-right: 10px;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .date-container {
@@ -5090,6 +5099,7 @@ main {
   color: #81868a;
   font-weight: 600;
   margin: 10px 0;
+  font-size: 14px;
 }
 
 .month__content {
@@ -5148,6 +5158,7 @@ main {
   color: #81868a;
   font-weight: 600;
   display: inline-block;
+  font-size: 14px;
   margin-bottom: 8px;
 }
 
@@ -5264,19 +5275,28 @@ main {
   }
   .personal__menu a {
     background-color: transparent;
+    font-size: 16px;
   }
   .personal__menu {
     padding: 0.2em 0.3em 0.3em;
+    padding-left: 20px;
   }
   .personal__menu:not(:last-child) {
     border-bottom: 1px solid #1c252c;
   }
-  .personal__menu a.active::before {
+  .personal__menu a.active {
+    background-color: transparent;
+  }
+  .personal__menu a:hover {
+    background-color: transparent;
+  }
+  .personal__menu a.active::before,
+  .personal__menu a:hover::before {
     z-index: 11;
-    height: 50%;
+    height: 20px;
     width: 3px;
     left: -13px;
-    top: -3px;
+    top: 5px;
   }
   .personal__items:first-child {
     display: none;
