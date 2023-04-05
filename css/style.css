@@ -4642,13 +4642,13 @@ main {
   margin-bottom: 15px;
 }
 .personal__button-save {
-  width: 222px;
   font-weight: 700;
   color: #ffffff;
   margin-top: 20px;
   background-color: #0d1b23;
   border: 1px solid #222e35;
-  padding: 7px 0px;
+  padding: 7px 20px;
+  margin-right: 10px;
   cursor: pointer;
   border-radius: 6px;
 }
